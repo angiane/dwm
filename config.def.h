@@ -72,28 +72,12 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL};
-static const char *miccap[]  = { "/home/yang/Arch/dwm/scripts/microphone_cap_or_nocap.sh", NULL };
-static const char *micup[]  = { "/home/yang/Arch/dwm/scripts/microphone_up.sh", NULL };
-static const char *micdown[]  = { "/home/yang/Arch/dwm/scripts/microphone_down.sh", NULL };
-static const char *volmute[]  = { "/home/yang/Arch/dwm/scripts/volume_mute_or_unmute.sh", NULL };
-static const char *volumeup[]  = { "/home/yang/Arch/dwm/scripts/volume_up.sh", NULL };
-static const char *voldown[]  = { "/home/yang/Arch/dwm/scripts/volume_down.sh", NULL };
-static const char *backlightup[]  = { "/home/yang/Arch/dwm/scripts/backlight_up.sh", NULL };
-static const char *backlightdown[]  = { "/home/yang/Arch/dwm/scripts/backlight_down.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY, 			XK_grave,  togglescratch,  {.v = scratchpadcmd} },
-	{ MODKEY,			XK_F1,	   spawn,	   {.v = miccap } },
-	{ MODKEY,			XK_F2,	   spawn,	   {.v = micdown } },
-	{ MODKEY,			XK_F3,	   spawn,	   {.v = micup } },
-	{ MODKEY,			XK_F4,	   spawn,	   {.v = volmute } },
-	{ MODKEY,			XK_F5,	   spawn,	   {.v = voldown } },
-	{ MODKEY,			XK_F6,	   spawn,	   {.v = volumeup } },
-	{ MODKEY,			XK_F7,	   spawn,	   {.v = backlightdown } },
-	{ MODKEY,			XK_F8,	   spawn,	   {.v = backlightup } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
