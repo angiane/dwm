@@ -2,6 +2,8 @@
 
 case "$*" in
 	"proxy")
+		nohup pkill clash >/dev/null 2>&1 &
+		wait
 		nohup clash >/dev/null 2>&1 &
 		;;
 	"unproxy")
